@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASEH WEB 🕸️ | Professional Web Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/spider-web.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-text">ASEH WEB</div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-switcher" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- AI Chat Bot -->
+    <div class="ai-bot-container">
+        <div class="ai-bot-icon" id="ai-bot-toggle">
+            <div class="bot-pulse"></div>
+            <i class="fas fa-robot"></i>
+            <div class="notification-badge">1</div>
+        </div>
+        <div class="ai-bot-chat" id="ai-bot-chat">
+            <div class="bot-header">
+                <div class="bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="bot-info">
+                    <h3>ASEH Assistant</h3>
+                    <p>Online • Ready to help</p>
+                </div>
+                <button class="close-bot" id="close-bot">&times;</button>
+            </div>
+            <div class="bot-messages" id="bot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm ASEH Assistant. I can help you with:</p>
+                        <ul>
+                            <li>Website information</li>
+                            <li>Service details</li>
+                            <li>Contact guidance</li>
+                            <li>Technical support</li>
+                        </ul>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            <div class="quick-replies">
+                <button class="quick-reply" data-message="Hello">👋 Say Hello</button>
+                <button class="quick-reply" data-message="Services">💼 Our Services</button>
+                <button class="quick-reply" data-message="Contact">📞 Contact Info</button>
+            </div>
+            <div class="bot-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                <button id="voice-toggle" class="voice-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">ASEH WEB <span class="web-emoji">🕸️</span></a>
+            
+            <!-- Centered Navigation -->
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline">Get Quote</a>
+            </div>
+            
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-glow glow-3"></div>
+        
+        <canvas id="particles-canvas"></canvas>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge animate__animated animate__fadeIn">
+                    <span>🚀 Professional Web Solutions</span>
+                </div>
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    Elevate Your <span class="highlight typed-text"></span>
+                </h1>
+                <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                    We create stunning, responsive websites with cutting-edge technology that drive results and enhance your digital presence.
+                </p>
+                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="stat">
+                        <h3>150+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>99%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Support Available</p>
+                    </div>
+                </div>
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop playsinline>
+                            <source src="videos/hero-background.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay"></div>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-element element-1">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll down</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span>Our Expertise</span>
+                </div>
+                <h2 class="animate__animated">Professional Services That <span class="highlight">Drive Growth</span></h2>
+                <p>We offer a comprehensive range of web solutions to help your business thrive in the digital landscape.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                                <div class="icon-shape"></div>
+                            </div>
+                            <h3>Custom Development</h3>
+                            <p>Tailored web solutions built with cutting-edge technology.</p>
+                            <div class="card-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Features Include:</h4>
+                            <ul>
+                                <li>Responsive Design</li>
+                                <li>CMS Integration</li>
+                                <li>E-commerce Solutions</li>
+                                <li>API Development</li>
+                            </ul>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-palette"></i>
+                                <div class="icon-shape"></div>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>User-centric designs that provide exceptional digital experiences.</p>
+                            <div class="card-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Features Include:</h4>
+                            <ul>
+                                <li>Wireframing</li>
+                                <li>Prototyping</li>
+                                <li>User Testing</li>
+                                <li>Design Systems</li>
+                            </ul>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="icon-shape"></div>
+                            </div>
+                            <h3>Digital Marketing</h3>
+                            <p>Strategic solutions to increase your online visibility and growth.</p>
+                            <div class="card-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Features Include:</h4>
+                            <ul>
+                                <li>SEO Optimization</li>
+                                <li>Social Media Marketing</li>
+                                <li>Content Strategy</li>
+                                <li>Analytics & Reporting</li>
+                            </ul>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span>Get In Touch</span>
+                </div>
+                <h2>Let's Build Something <span class="highlight">Amazing</span> Together</h2>
+                <p>Reach out to us for inquiries, quotes, or to discuss your next project.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Live Chat</h3>
+                        <p>Chat with our team instantly</p>
+                        <a href="#" class="chat-now">Chat Now →</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                        <a href="tel:+15551234567" class="call-now">Call Now →</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@asehweb.com</p>
+                        <a href="mailto:info@asehweb.com" class="email-now">Email Now →</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-header">
+                            <h3>Send us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i>
+                                    Full Name
+                                </label>
+                                <input type="text" id="name" required>
+                                <div class="focus-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" id="email" required>
+                                <div class="focus-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i>
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="phone">
+                                <div class="focus-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">
+                                    <i class="fas fa-cog"></i>
+                                    Service Interested In
+                                </label>
+                                <select id="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="development">Web Development</option>
+                                    <option value="design">UI/UX Design</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="consulting">Consulting</option>
+                                </select>
+                                <div class="focus-line"></div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message">
+                                    <i class="fas fa-edit"></i>
+                                    Your Message
+                                </label>
+                                <textarea id="message" rows="4" required></textarea>
+                                <div class="focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <p class="form-note">
+                                <i class="fas fa-lock"></i>
+                                Your information is secure with us
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">ASEH WEB <span class="web-emoji">🕸️</span></a>
+                    <p>Transforming ideas into exceptional digital experiences since 2020.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                       <a href="https://web.facebook.com/profile.php?id=61585150174868" target="_blank" class="social-icon" aria-label="Facebook">
+                       <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ASEH WEB. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
